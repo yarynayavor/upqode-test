@@ -124,6 +124,34 @@ input.search {
 	opacity:1;
 }
 
+.carousel-caption {
+    top: 35%;
+    bottom: auto;
+
+    h3 {
+    	font-size:54px;
+    	font-weight:700;
+    	font-family:$main-font;
+    	text-transform:uppercase;
+    	letter-spacing:3px;
+    	word-spacing:3px;
+    	margin-bottom:25px;
+    	span {
+    		color:$nav-color;
+    	}
+    }
+
+    p {
+    	font-weight:300;
+    	font-family:$main-font;
+    	width:74%;
+    	margin:0 auto;
+    	font-size:14px;
+    	word-spacing:2px;
+    	line-height:25px;
+    }
+}
+
 
 
 /*RESPONSIVE STYLES*/
