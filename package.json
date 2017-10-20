@@ -4,7 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp production",
+    "build:dev": "gulp server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/yarynayavor/upqode-test/issues"
   },
-  "homepage": "https://github.com/yarynayavor/upqode-test#readme"
+  "homepage": "https://github.com/yarynayavor/upqode-test#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sequence": "^0.4.6",
+    "jshint": "^2.9.5",
+    "pump": "^1.0.2"
+  },
+  "dependencies": {
+    "delete": "^1.1.0"
+  }
 }
