@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 const jshint = require('gulp-jshint');
+const autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var path = require('path');
 var pump = require('pump');
 var del = require('delete');
 var browserSync = require('browser-sync').create();
 var gulpSequence = require('gulp-sequence');
+var cssbeautify = require('gulp-cssbeautify');
 
 //added gulp-jshint task
 gulp.task('jshint', function() {
@@ -18,6 +20,11 @@ gulp.task('jshint', function() {
 gulp.task('sass', function () {
   return gulp.src('dev/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false  
+        }))
+    .pipe(cssbeautify())
     .pipe(gulp.dest('production/css'))
     .pipe(browserSync.stream())
 });
