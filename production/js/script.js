@@ -33,11 +33,20 @@ $(document).ready(function () {
 	$('#myCarousel').on('slid.bs.carousel', function () {   
 	clearTimeout(t);  
 	var duration = $(this).find('.item.active').attr('data-interval');
-	console.log(duration);
+	// console.log(duration);
 
 	$('#myCarousel').carousel('pause');
 	t = setTimeout("$('#myCarousel').carousel();", duration-1000);
 	//console.log(t);
 	});
 
+});
+
+//animation skills
+$(window).scroll(function() {
+    $('.progress .progress-bar').css("width",
+        function() {
+         return $(this).attr("aria-valuenow") + "%";
+            }
+    )
 });

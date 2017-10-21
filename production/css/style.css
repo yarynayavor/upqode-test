@@ -160,6 +160,61 @@ input.search {
     word-spacing: 2px;
     line-height: 25px; }
 
+.progress {
+  height: 10px;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  border: 1px solid #ccc; }
+  .progress .progress-bar {
+    transition: width 3s ease;
+    background-color: #0F98CE;
+    height: 4px;
+    margin: 2px; }
+
+.skill {
+  font: bold 14px "Lato", sans-serif;
+  line-height: 35px;
+  padding: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase; }
+  .skill .val {
+    float: right;
+    font-style: normal;
+    margin: 0; }
+
+div.tablet-img {
+  display: flex;
+  justify-content: center;
+  margin-left: 40%; }
+  div.tablet-img img {
+    margin-top: 20%; }
+
+section#about {
+  padding: 100px;
+  outline: 0; }
+  section#about h2 {
+    text-transform: uppercase;
+    font: bold 35px "Lato", sans-serif;
+    word-spacing: 2px;
+    color: #373737; }
+    section#about h2 span {
+      color: #0C99D1; }
+  section#about p.main-d {
+    color: #989898;
+    font-size: 12px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 22px;
+    margin: 20px 0 40px; }
+  section#about p.description {
+    color: #6B6B6B;
+    font-size: 12px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 22px;
+    margin: 0 0 40px; }
+
 /*RESPONSIVE STYLES*/
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -269,6 +324,16 @@ input.search {
     background: 0; }
   .carousel-caption {
     top: 35%; } }
+
+@media only screen and (max-width: 991px) {
+  div.tablet-img {
+    margin-left: 0; }
+    div.tablet-img img {
+      width: 50%;
+      height: 50%;
+      margin-top: 20px; }
+  section#about {
+    padding: 30px 15px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 974px) {
