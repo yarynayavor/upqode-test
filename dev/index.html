@@ -27,25 +27,25 @@
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#home">Home</a></li>
-							<li class="dropdown first-1"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products</a>
+							<li class="dropdown first-1"><a class="dropdown-toggle" data-toggle="dropdown" href="#product">Products</a>
 								<ul class="dropdown-menu multi-level">
-									<li><a href="#section41"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a></li>
-									<li><a href="#section42"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa Chris</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa Chris</a></li>
 									<li class="dropdown-submenu first-2"><a href="#section43"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a>
 										<ul class="dropdown-menu">
-											<li><a href="#section51"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a></li>
-											<li><a href="#section52"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa Chris</a></li>
-											<li><a href="#section53"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a></li>
-											<li><a href="#section54"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa</a></li>
-											<li><a href="#section55"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa Chris</a></li>
+											<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a></li>
+											<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa Chris</a></li>
+											<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Name Surname</a></li>
+											<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa</a></li>
+											<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa Chris</a></li>
 										</ul>
 									</li>
-									<li><a href="#section44"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa</a></li>
+									<li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Nelson Noa</a></li>
 								</ul>
 							</li>
 
 							<li><a href="#about">About</a></li>
-							<li><a href="#section3">Contact</a></li>
+							<li><a href="#contact">Contact</a></li>
 							<li><input class="search" type="text"></li>
 						</ul>
 					</div>
@@ -102,7 +102,10 @@
   </div>
   </section>
 
-
+  <section id="product">
+  	<div class="background-line"></div>
+  	<h2>Our <span>products</span></h2>
+  </section>
   <section id="about" class="container">
   	<div class="row">
   		<div class="col-md-7 col-sm-12">
@@ -145,46 +148,50 @@
   	</div>
 
   </section>
-  
 
+  <section id="contact">
+  	<h2>Get in <span>touch</span></h2>
+  	<p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus,</p>
+  	<div id="map"></div>
+  	<form class="form" action="#home">
+  		<div class="row">
+  			<div class="col-md-8 col-sm-12">
+  				<input type="text" name="name" id="name" placeholder="Full Name" required>
+  				<div class="select">
+  					<select name="e-mail" id="email" required>
+  					<option value="" disabled selected hidden>E-mail Address</option>
+  					<option value="somename@mail.com">somename@mail.com</option>
+  					<option value="name@mail.com">name@mail.com</option>
+  					<option value="yourname@mail.com">yourname@mail.com</option>
+  				</select>
+  				</div>
+  				<textarea id="message" placeholder="Message" required></textarea> <br>
+  				<input type="checkbox" name="check" value="checkbox" id="like" required>
+  				<label for="like">I like your company</label>
+  				<input type="submit" name="Submit" value="Send">
+  			</div>
+  			<div class="col-md-4 col-sm-12">
+  				<ul>
+  					<li>69/A, Some Street Name<br>
+  						Your City, code 01234 <br>
+  					Country Name</li>
+  					<li>+880 123 456 78 98<br>
+  					+860 987 648 74 95</li>
+  					<li>company@mail.com<br>
+  					sales@mail.com</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</form>
+  </section>
 
-	<!-- <div id="section1" class="container-fluid">
-		<h1>Section 1</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div> -->
-	<div id="section2" class="container-fluid">
-		<h1>Section 2</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div>
-	<div id="section3" class="container-fluid">
-		<h1>Section 3</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div>
-	<div id="section41" class="container-fluid">
-		<h1>Section 4 Submenu 1</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div>
-	<div id="section42" class="container-fluid">
-		<h1>Section 4 Submenu 2</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div>
-
-	<div id="section43" class="container-fluid">
-		<h1>Section 4 Submenu 1</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div>
-	<div id="section44" class="container-fluid">
-		<h1>Section 4 Submenu 2</h1>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-		<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	</div>
+  <footer>
+  		<p>Copyright © Company. All Rights Reserved  2016</p>
+  </footer>
+ 
 </body>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/smoothscroll.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJGIi3aTP9-lGYWJ5HzUTud9tdaG3cVaM&callback=myMap"></script>
 </html>

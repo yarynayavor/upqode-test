@@ -3,57 +3,6 @@ body {
     min-width: 320px;
 }
 
-#section1 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background: url("../img/banner.png") no-repeat;
-    width: 100%;
-    height: 100vh;
-}
-
-#section2 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background-color: #673ab7;
-}
-
-#section3 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background-color: #ff9800;
-}
-
-#section41 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background-color: #00bcd4;
-}
-
-#section42 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background-color: #009688;
-}
-
-#section43 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background-color: #00bcd4;
-}
-
-#section44 {
-    padding-top: 50px;
-    height: 500px;
-    color: #fff;
-    background-color: #009688;
-}
-
 a.navbar-brand {
     background: url("../img/logo.png") no-repeat;
     width: 150px;
@@ -272,6 +221,214 @@ section#about p.description {
     margin: 0 0 40px;
 }
 
+div#map {
+    width: 100%;
+    height: 500px;
+}
+
+.gm-fullscreen-control,
+.gm-style-mtc,
+.gmnoprint,
+.gm-style {
+    background: #000;
+    opacity: 0.65;
+}
+
+section#contact {
+    padding: 70px 0 0;
+    position: relative;
+    outline: 0;
+}
+
+section#contact h2, section#contact p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+section#contact h2 {
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+section#contact h2 span {
+    color: #079DD9;
+}
+
+section#contact p {
+    color: #B3B3B3;
+    font-weight: 300;
+    width: 48%;
+    margin: 0 auto;
+    line-height: 22px;
+    margin-bottom: 70px;
+}
+
+section#contact form {
+    padding: 70px 60px;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    right: 20%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+section#contact form input[type="text"],
+    section#contact form input[type="checkbox"],
+    section#contact form select, section#contact form textarea {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #999898;
+    color: #B6B6B6;
+}
+
+section#contact form input[type="text"]::-webkit-input-placeholder,
+      section#contact form input[type="checkbox"]::-webkit-input-placeholder,
+      section#contact form select::-webkit-input-placeholder, section#contact form textarea::-webkit-input-placeholder {
+    color: #B6B6B6;
+}
+
+section#contact form input[type="text"] {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    width: 40%;
+}
+
+section#contact form textarea {
+    resize: none;
+    width: 84.5%;
+    height: 100px;
+    padding: 5px 15px;
+}
+
+section#contact form select {
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+section#contact form .select {
+    border: 1px solid #999898;
+    position: relative;
+    display: inline-block;
+}
+
+section#contact form .select:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    color: #fff;
+    padding: 12px 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section#contact form label {
+    color: #B6B6B6;
+    width: 62%;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+section#contact form input[type="checkbox"] {
+    display: none;
+}
+
+section#contact form input[type="checkbox"] + label:before {
+    border: 1px solid #999898;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 2px 5px 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+}
+
+section#contact form input[type="checkbox"]:checked + label:before {
+    background: #fff;
+    color: #079DD9;
+    content: "\2713";
+    text-align: center;
+}
+
+section#contact form input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+}
+
+section#contact form input[type="checkbox"]:focus + label::before {
+    outline: #3b99fc auto 5px;
+}
+
+section#contact form input[type="submit"] {
+    background-color: #FDFE1F;
+    outline: none;
+    border: 0;
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+
+section#contact form ul li {
+    color: #EEEEEC;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #191919;
+    color: #797979;
+}
+
+footer p {
+    text-align: left;
+    padding: 15px 10px;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+
+section#product {
+    outline: none;
+    background: url("../img/product-background.png") no-repeat;
+    height: 100vh;
+}
+
+section#product div.background-line {
+    background: url("../img/product-background-line.png") no-repeat center center;
+    background-size: cover;
+    height: 140px;
+    width: 100%;
+}
+
+section#product h2 {
+    position: relative;
+    top: -26%;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-top: 70px;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+}
+
+section#product h2 span {
+    color: #F2F022;
+}
+
 /*RESPONSIVE STYLES*/
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -351,6 +508,12 @@ section#about p.description {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    section#contact form textarea {
+        width: 90.5%;
+    }
+}
+
 @media only screen and (max-width: 1274px) {
     .carousel-caption {
         top: 37%;
@@ -369,8 +532,40 @@ section#about p.description {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    section#contact form textarea {
+        width: 96.5%;
+    }
+}
+
+@media only screen and (max-width: 1047px) {
+    section#contact form input[type="text"],
+  section#contact form .select,
+  section#contact form textarea {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    section#contact form .select {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    section#contact form label {
+        width: 60%;
+    }
+
+    section#contact form ul li {
+        font-size: 10px;
+    }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1024px) {
+    section#contact form textarea {
+        width: 100%;
+    }
+
     .navbar-collapse.collapse {
         display: none !important;
     }
@@ -448,6 +643,22 @@ section#about p.description {
 }
 
 @media only screen and (max-width: 991px) {
+    section#contact form {
+        padding: 20px 30px;
+        top: 40%;
+    }
+
+    section#contact form li {
+        display: inline-block;
+        padding-left: 20px;
+        padding-top: 15px;
+        margin-bottom: 0;
+    }
+
+    section#contact form label {
+        width: 71.5%;
+    }
+
     div.tablet-img {
         margin-left: 0;
     }
@@ -478,6 +689,13 @@ section#about p.description {
     }
 }
 
+@media only screen and (max-width: 908px) {
+    div#map {
+        width: 100%;
+        height: 600px;
+    }
+}
+
 @media only screen and (max-width: 890px) {
     .carousel-caption h3 {
         font-size: 30px;
@@ -485,6 +703,10 @@ section#about p.description {
 
     .carousel-caption p {
         width: 90%;
+    }
+
+    section#contact form label {
+        width: 100%;
     }
 }
 
@@ -520,6 +742,18 @@ section#about p.description {
     .carousel-indicators .active {
         width: 6px;
         height: 6px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div#map {
+        height: 700px;
+    }
+
+    section#contact form ul li {
+        padding-top: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 

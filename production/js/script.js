@@ -50,3 +50,23 @@ $(window).scroll(function() {
             }
     )
 });
+
+//google maps added
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+   new google.maps.Rectangle({
+        fillColor: 'black',
+        fillOpacity: 0.5,
+        map: map,
+        bounds: new google.maps.LatLngBounds(
+    new google.maps.LatLng(-90, -180),
+    new google.maps.LatLng(90, 180))
+    });
+}
+
+/*click event when saving data*/
+
