@@ -27,22 +27,22 @@ a.navbar-brand {
 	.navbar-nav>li {
 		min-width: 120px;
 		text-align: center;
-	}
-	.navbar-nav>li>a {
-		color:#000;
-		font-weight: 400;
-		font-family: $main-font;
-		font-size: 16px;
-		transition: all 0.5s ease;
-		padding:15px 0;
-		margin: 0 5px;
-	}
-	.navbar-nav>li>a:focus,
-	.navbar-nav>li>a:hover {
-		color:#000;
-		font-weight: 800;
-		transition: all 0.5s ease;
-	}
+		&>a {
+			color:#000;
+			font-weight: 400;
+			font-family: $main-font;
+			font-size: 16px;
+			transition: all 0.5s ease;
+			padding:15px 0;
+			margin: 0 5px;
+			&:focus,
+	    	&:hover {
+				color:#000;
+				font-weight: 800;
+				transition: all 0.5s ease;
+			}
+  		}
+}
 	.navbar-nav>.active>a,
 	.navbar-nav>.active>a:focus,
 	.navbar-nav>.active>a:hover,
@@ -92,36 +92,33 @@ input.search {
     }
  }
 
- .carousel-control.left,
- .carousel-control.right {
- 	background:none;
- 	color:#fff;
- }
-
-
- .carousel-control .fa-angle-left,
- .carousel-control .fa-angle-right,
- .carousel-control .icon-next,
- .carousel-control .icon-prev {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    margin-top: -10px;
-    background-color: rgba(255,255,255,.15);
-    padding:18px 25px;
-}
-
-.carousel-control:focus,
-.carousel-control:hover {
-	opacity:0.8;
-	color:#fff;
-}
-
-.carousel-control {
-	text-shadow:none;
+ .carousel-control {
+ 	text-shadow:none;
 	color:#fff;
 	opacity:1;
+
+ 	.fa-angle-left,
+ 	.fa-angle-right,
+ 	.icon-next,
+ 	.icon-prev {
+    	position: absolute;
+    	top: 50%;
+    	z-index: 5;
+    	display: inline-block;
+    	margin-top: -10px;
+    	background-color: rgba(255,255,255,.15);
+    	padding:18px 25px;
+	}
+	&.left,
+ 	&.right {
+ 		background:none;
+ 		color:#fff;
+ }
+ 	&:focus,
+	&:hover {
+		opacity:0.8;
+		color:#fff;
+	}
 }
 
 .carousel-caption {
@@ -234,21 +231,24 @@ section#about {
 		background-color: rgba(17,12,25,.65);
 		padding: 20px 5px;
 		left:24%;
+		&>.active>a,
+		&>.active>a:focus,
+		&>.active>a:hover {
+			background:0;
+		}
+		&>li>a {
+			font-family: $main-font;
+			font-weight: 300;
+			line-height: 20px;
+			word-spacing: 4px;
+			padding: 7px 10px;
+			&:focus,
+			&:hover {
+				color:$nav-color;
+				background: 0;
+			}
+		}
 	}
-}
-
-.dropdown-menu>li>a {
-	font-family: $main-font;
-	font-weight: 300;
-	line-height: 20px;
-	word-spacing: 4px;
-	padding: 7px 10px;
-	}
-
-.dropdown-menu>li>a:focus,
-.dropdown-menu>li>a:hover {
-	color:$nav-color;
-	background: 0;
 }
 
 .navbar-nav>li>.dropdown-menu {
@@ -257,37 +257,31 @@ section#about {
 
 .dropdown-submenu {
 	position: relative;
-}
-
-.dropdown-submenu>.dropdown-menu {
-	top: 0;
-	left: 100%;
-	margin-top: -6px;
-	margin-left: 5px;
-}
-
-.dropdown-submenu:hover>.dropdown-menu {
+	&>.dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-top: -6px;
+		margin-left: 5px;
+	}
+	&:hover>.dropdown-menu {
 	display: block;
-}
-
-.dropdown-menu>.active>a,
-.dropdown-menu>.active>a:focus,
-.dropdown-menu>.active>a:hover {
-	color:$nav-color;
-	background: 0; 
-}
-
-.dropdown-submenu:hover>a:after {
-	border-left-color: #fff;
-}
-
-.dropdown-submenu.pull-left {
-	float: none;
-}
-
-.dropdown-submenu.pull-left>.dropdown-menu {
-	left: -100%;
-	margin-left: 10px;
+	}
+	&>.active>a,
+	&>.active>a:focus,
+	&>.active>a:hover {
+		color:$nav-color;
+		background: 0; 
+	}
+	&:hover>a:after {
+		border-left-color: #fff;
+	}
+	&.pull-left {
+		float: none;
+		&>.dropdown-menu {
+			left: -100%;
+			margin-left: 10px;
+		}
+	}
 }
 
 #myCarousel .item{
@@ -318,10 +312,11 @@ section#about {
 @media only screen and (max-width : 1024px) {
 	.navbar-collapse.collapse {
         display: none !important;
+        &.in {
+        	display: block !important;
+    	}
     }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
+
     .navbar-header {
         float:none;
         .collapse, .navbar-toggle {
@@ -341,6 +336,15 @@ section#about {
     .navbar-right {
     	float: none !important;
     	width:100%;
+    	.dropdown-menu {
+ 			left:0;
+ 			box-shadow:none;
+ 			border:0;
+ 			text-align:center;
+ 			float:none;
+ 			position:static;
+ 			background-color: rgba(17,12,25,.65);
+ 		}
     }
 
     .navbar-toggle {
@@ -355,29 +359,17 @@ section#about {
         .navbar-toggle:hover {
     		background:none;
      }
-    }
-
-    .navbar-inverse .navbar-collapse,
- .navbar-inverse .navbar-form {
+     .navbar-collapse,
+     .navbar-form {
  	border:0;
  }
-
- .navbar-fixed-bottom .navbar-collapse,
- .navbar-fixed-top .navbar-collapse {
- 	max-height:600px;
- }
-
- .navbar-right {
- 	.dropdown-menu {
- 		left:0;
- 		box-shadow:none;
- 		border:0;
- 		text-align:center;
- 		float:none;
- 		position:static;
- 		background-color: rgba(17,12,25,.65);
+}
+.navbar-collapse {
+	.navbar-fixed-bottom,
+ 	.navbar-fixed-top  {
+ 		max-height:600px;
  	}
- } 
+}
 
  .dropdown-menu>.active>a,
  .dropdown-menu>.active>a:focus,
@@ -413,19 +405,17 @@ section#about {
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 974px) {
 	.carousel-caption {
-	 
-    h3 {
+    	h3 {
     	font-size:35px;
-    }
-    p {
+    	}
+    	p {
     	width:82%;
-    }
-}
+    	}
+	}
 
-.navbar {
-	padding:0;
-}
-
+	.navbar {
+		padding:0;
+	}
 }
 
 @media only screen and (max-width : 890px) {
@@ -433,7 +423,6 @@ section#about {
     h3 {
     	font-size:30px;
     }
-
     p {
     	width:90%;
     }
@@ -456,7 +445,6 @@ section#about {
     h3 {
     	font-size:22px;
     }
-
     p {
     	font-size:10px;
     	line-height:15px;
@@ -478,21 +466,18 @@ section#about {
 @media only screen and (max-width : 560px) {
 	.carousel-caption {
     top:25%;
-    h3 {
+    	h3 {
     	font-size:18px;
-    }
-
-    p {
+    	}
+    	p {
     	font-size:9px;
+    	}
     }
-}
-     
 }
 
  
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	
 .carousel-caption {
     top:30%;
     h3 {
@@ -504,14 +489,12 @@ section#about {
      font-size:10px;
     }
 }
-
  .carousel-control .fa-angle-left,
      .carousel-control .fa-angle-right,
      .carousel-control .icon-next,
      .carousel-control .icon-prev {
      	top:60%;
     }
-
     .carousel-inner>.item>a>img,
 	.carousel-inner>.item>img,
 	.img-responsive,
@@ -519,7 +502,6 @@ section#about {
 	.thumbnail>img  {
 		height:50vh;
  	}
- 
 }
  
 /* Custom, iPhone Retina */
